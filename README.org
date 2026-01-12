@@ -1,0 +1,5 @@
+#+title: Papier's tree-sitter grammar
+
+* Info
+This is the ~tree-sitter~ grammar for [[https://papier-lang.github.io/papier/][Papier]], a simple tree language that can
+embed other documents.
