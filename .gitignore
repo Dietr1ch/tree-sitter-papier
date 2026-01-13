@@ -16,6 +16,9 @@
 
 !.envrc.example
 
+## Debugging output
+log.html
+
 ## Generated files (https://tree-sitter.github.io/tree-sitter/cli/init.html#generated-files)
 
 src/
