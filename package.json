@@ -1,7 +1,7 @@
 {
   "name": "tree-sitter-papier",
   "version": "0.1.0",
-  "description": "Papier, A strict, simple recursive document language",
+  "description": "Papier is a strict, small document language",
   "repository": "https://papier-lang.github.io/papier",
   "license": "MIT",
   "author": {
