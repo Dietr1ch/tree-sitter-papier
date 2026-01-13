@@ -1,0 +1,21 @@
+#!/usr/bin/env fish
+
+just build || return 1
+
+for ex in $argv
+    echo
+    bat $ex
+
+    systemd-run \
+        --scope \
+        -p 'MemoryMax=100M' \
+        -p 'MemorySwapMax=0' \
+        --user \
+        tree-sitter \
+        highlight \
+        --time \
+        $ex \
+        | bat \
+        --paging never \
+        --style 'grid,snip'
+end
