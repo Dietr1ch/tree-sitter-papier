@@ -2,7 +2,7 @@ default: test
 
 
 build:
-	tree-sitter generate
+	tree-sitter generate --log --json
 
 test: build
 	tree-sitter test
