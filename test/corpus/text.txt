@@ -1,0 +1,39 @@
+======
+Text - Plain
+:language(papier)
+======
+
+This is raw text
+
+---
+
+(papier
+ (text
+  (line)
+  (line
+   (word)
+   (word)
+   (word)
+   (word))))
+
+======
+Text - With tags
+:language(papier)
+======
+
+This is a #really #simple tag
+
+---
+
+(papier
+ (text
+  (line)
+  (line
+   (word)
+   (word)
+   (word)
+   (word
+    (tag))
+   (word
+    (tag))
+   (word))))

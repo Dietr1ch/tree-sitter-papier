@@ -1,0 +1,98 @@
+======
+Multi - word
+:language(papier)
+======
+a multiword
+
+---
+
+(papier
+ (text
+  (line
+   (word)
+   (word))))
+
+
+======
+Multi - uuid
+:language(papier)
+======
+!12345678-1234-1234-1234-123456789012 !12345678-1234-1234-1234-123456789012
+
+---
+
+(papier
+ (text
+  (line
+   (word
+    (uuid))
+   (word
+    (uuid)))))
+
+
+======
+Multi - alias
+:language(papier)
+======
+!!emacs !!rocks
+
+---
+
+(papier
+ (text
+  (line
+   (word
+    (alias))
+   (word
+    (alias)))))
+
+
+======
+Multi - ref
+:language(papier)
+======
+!?https://papier-lang.org?cool=yes !?SHORT_ID
+
+---
+
+(papier
+ (text
+  (line
+   (word
+    (ref))
+   (word
+    (ref)))))
+
+
+======
+Multi - tag
+:language(papier)
+======
+#hashtag #hashtag
+
+---
+
+(papier
+ (text
+  (line
+	 (word
+		(tag))
+   (word
+    (tag)))))
+
+
+======
+Multi - format
+:language(papier)
+======
+@org @md
+
+---
+
+(papier
+ (text
+  (line
+	 (word
+		(fmt))
+   (word
+    (fmt)))))
