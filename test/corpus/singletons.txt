@@ -1,0 +1,107 @@
+======
+Singleton - Odd bullet
+:language(papier)
+======
+*
+---
+
+(papier
+ (text
+  (line
+   (word))))
+
+
+======
+Singleton - Faux
+:language(papier)
+======
+* title with #many #tags @fmt
+---
+
+(papier
+ (text
+  (line
+   (word)
+   (word)
+   (word)
+   (word
+    (tag))
+   (word
+    (tag)
+   (word
+    (fmt))))))
+
+
+======
+Singleton - Anonymous Papier
+:language(papier)
+======
+* {
+	sample_content
+}
+---
+
+(papier
+ (sub_document
+  (sub_document_block
+   (sub_document_content))))
+
+
+======
+Singleton - Anonymous external
+:language(papier)
+======
+* @md {
+	sample_content
+}
+---
+
+(papier
+ (sub_document
+  (sub_document_block
+   (sub_document_content))))
+
+
+======
+Singleton - Named Papier
+:language(papier)
+======
+* title with #many #tags {
+	sample_content
+}
+---
+
+(papier
+ (sub_document
+  (title
+   (word)
+   (word)
+   (word
+    (tag))
+   (word
+    (tag)))
+  (sub_document_block
+   (sub_document_content))))
+
+
+======
+Singleton - External Document
+:language(papier)
+======
+* title with #many #tags and @format {
+	sample_content
+}
+---
+
+(papier
+ (sub_document
+  (title
+   (word)
+   (word)
+   (word
+    (tag))
+   (word
+    (tag))
+   (word))
+  (sub_document_block
+   (sub_document_content))))

@@ -1,0 +1,19 @@
+======
+Conflicts - text and header
+:language(papier)
+======
+Text
+* title {
+	such_contents
+}
+---
+
+(papier
+ (text
+  (line
+	 (word))
+  (line))
+ (sub_document
+  (title
+   (word)
+  (contents)))))

@@ -1,0 +1,20 @@
+======
+Simple sub-doc
+:language(papier)
+======
+Text
+
+* title {
+	sample_content
+}
+---
+
+(papier
+ (text
+  (line
+	 (word))
+  (line))
+ (sub_document
+  (title
+   (word)
+  (contents)))))
