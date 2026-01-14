@@ -1,0 +1,15 @@
+#:schema https://dystroy.org/bacon/.bacon.schema.json
+# - Docs: https://dystroy.org/bacon/config/
+# - Defaults: https://github.com/Canop/bacon/blob/main/defaults/default-bacon.toml
+
+default_job = "test"
+env.CARGO_TERM_COLOR = "always"
+
+[jobs.test]
+command = [
+  "tree-sitter",
+  "test",
+  "--rebuild",
+  "--stat", "all",
+]
+need_stdout = true
