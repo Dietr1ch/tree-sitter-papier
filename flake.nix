@@ -35,6 +35,7 @@
           default = pkgs.mkShell {
             packages = with pkgs; [
               just
+              bacon
 
               # Tree sitter
               tree-sitter
