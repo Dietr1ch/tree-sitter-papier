@@ -51,6 +51,9 @@ module.exports = grammar({
 
   extras: _ => ['\r'], // fuck this shit!
 
+  // These must be in sync with TokenType in ./src/scanner.c
+  externals: $ => [$.block_start, $.block_content, $.block_end],
+
   rules: {
     papier: $ => repeat(choice($.sub_document, $.text)),
 
