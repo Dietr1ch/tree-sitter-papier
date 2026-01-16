@@ -55,6 +55,9 @@ module.exports = grammar({
     '\r', // fuck this shit!
   ],
 
+  // These must be in sync with TokenType in ./src/scanner.c
+  externals: $ => [$.doc_start],
+
   rules: {
     papier: $ => repeat(choice(prec(1, $.sub_document), $.text)),
 
@@ -90,9 +93,11 @@ module.exports = grammar({
     sub_document: $ =>
       prec.left(
         seq(
-          '* ',
+          $.doc_start,
+          optional(SPACE),
           optional(field('title', repeat1($.word))),
           '{',
+          NL,
           optional(field('contents', $.contents)),
           '}',
           optional(NL),

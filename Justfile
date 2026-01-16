@@ -14,6 +14,7 @@ fmt:
 	nixfmt --check $(find . -name '*.nix')
 	prettier --check --write $(find . -name '*.json')
 	js-beautify --editorconfig --replace $(find . -name '*.js')
+	clang-format -i $(find . -name '*.c')
 
 parse FILE:
 	tree-sitter parse --rebuild --cst {{FILE}}
