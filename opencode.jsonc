@@ -1,0 +1,55 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "permission": {
+    "*": "ask",
+    "list": "allow",
+    // TODOs
+    "todoread": "allow",
+    "todowrite": "allow",
+    // Commands
+    "bash": {
+      "*": "ask",
+      "git status": "allow",
+      "git ls": "allow",
+      "git *": "ask",
+      "npm *": "deny",
+      "rm *": "deny",
+      "grep *": "allow",
+      "just *": "allow"
+    },
+    // Reading
+    "read": {
+      "*": "ask",
+      "*.env": "deny",
+      "*.env.*": "deny",
+      "*.env.example": "allow",
+      "Justfile": "allow",
+      "*.org": "allow",
+      "*.md": "allow",
+      "*.nix": "allow",
+      "grammar.js": "allow",
+      "src/scanner.c": "allow",
+      "src/tree_sitter/*.h": "allow",
+      "*.papier": "allow",
+      "*.txt": "allow"
+    },
+    // Editing
+    "edit": {
+      "*": "deny",
+      "*.env": "deny",
+      "*.env.*": "deny",
+      "*.env.example": "allow",
+      "grammar.js": "allow",
+      "src/scanner.c": "ask",
+      "*.org": "ask",
+      "*.md": "ask",
+      "*.mdx": "ask",
+      "*.json": "ask",
+      "*.nix": "ask",
+      "Justfile": "ask",
+      "*.papier": "ask",
+      "*.txt": "ask"
+    },
+    "lsp": "ask"
+  }
+}

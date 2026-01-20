@@ -9,6 +9,9 @@
 !.gitignore
 
 
+# OpenCode
+!.opencode
+
 # JS
 !.prettierrc.json
 
