@@ -3,3 +3,21 @@
 * Info
 This is the ~tree-sitter~ grammar for [[https://papier-lang.github.io/papier/][Papier]], a simple tree language that can
 embed other documents.
+
+Papier files are regular text files that allow you to embed other files within it
+
+
+* Example Papier file
+#+begin_src papier
+  This is regular text
+
+  * Sub-document title @md {
+    This is a markdown subdocument.
+  }
+
+  This is again, regular text
+
+  * Another subdocument @txt !EoF{
+    This is another subdocument, but this time enclosed with heredoc-style braces.
+  }EoF!
+#+end_src
