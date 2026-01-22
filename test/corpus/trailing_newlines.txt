@@ -1,11 +1,12 @@
 ======
-Conflicts - text and header
+Trailing - text and document with trailing newline
 :language(papier)
 ======
 Text
 # Title {
 	Such_contents
 }
+
 ---
 
 (papier
@@ -15,17 +16,18 @@ Text
  (sub_document
   title: (title
 	        (word))
-  contents: (contents)))
+  contents: (contents))
+ (text
+  (line)))
 
 ======
-Conflicts - header and text
+Trailing - header and text without trailing newline
 :language(papier)
 ======
 # Title {
 	Such_contents
 }
 Text
-
 ---
 
 (papier

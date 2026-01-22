@@ -23,7 +23,7 @@
 ///
 /// NOTE: These MUST be duplicated in `../grammar.js`s `externals: $ = > [],`
 enum TokenType {
-  DOC_START, // Matches `^(#).*{$`
+  _DOC_START, // Matches `^(#).*{$`
 };
 
 // Helpers
@@ -101,7 +101,7 @@ static inline bool scan(Scanner *scanner, //
       case ' ': {
         // Found `^(#) `. This is a sub-document heading
         lx_skip(lexer);
-        lexer->result_symbol = DOC_START;
+        lexer->result_symbol = _DOC_START;
         return TOKEN_LEXED;
       }
 

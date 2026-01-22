@@ -45,7 +45,7 @@ module.exports = grammar({
   ],
 
   // These must be in sync with TokenType in ./src/scanner.c
-  externals: $ => [$.doc_start],
+  externals: $ => [$._doc_start],
 
   rules: {
     papier: $ => repeat(choice(prec(1, $.sub_document), $.text)),
@@ -79,8 +79,8 @@ module.exports = grammar({
     sub_document: $ =>
       prec.left(
         seq(
-          $.doc_start,
-          optional(field('title', repeat1($.word))),
+          $._doc_start,
+          optional(field('title', $.title)),
           field('opening_brace', '{'),
           NL,
           optional(field('contents', $.contents)),
@@ -89,6 +89,7 @@ module.exports = grammar({
         ),
       ),
 
+    title: $ => repeat1($.word),
     contents: $ =>
       repeat1(field('line', seq(optional(seq(TAB, REGEX_LINE)), NL))),
   },

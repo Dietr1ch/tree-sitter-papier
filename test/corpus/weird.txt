@@ -1,0 +1,38 @@
+======
+Weird - Single bullet
+:language(papier)
+======
+#
+---
+
+(papier
+ (text
+  (line
+   (word))))
+
+
+======
+Weird - Empty document
+:language(papier)
+======
+# empty
+---
+
+(papier
+ (sub_document
+  title: (title
+	        (word))))
+
+
+======
+Weird - Empty document with newline
+:language(papier)
+======
+# empty
+
+---
+
+(papier
+ (sub_document
+  title: (title
+	        (word))))

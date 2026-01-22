@@ -16,5 +16,5 @@ Text
   (line))
  (sub_document
   (title
-   (word)
-  (contents)))))
+   (word))
+  (contents)))

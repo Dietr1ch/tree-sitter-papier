@@ -1,17 +1,4 @@
 ======
-Singleton - Odd bullet
-:language(papier)
-======
-#
----
-
-(papier
- (text
-  (line
-   (word))))
-
-
-======
 Singleton - Empty document
 :language(papier)
 ======
@@ -42,8 +29,7 @@ Singleton - Anonymous Papier
 
 (papier
  (sub_document
-  (sub_document_block
-   (sub_document_content))))
+  (contents)))
 
 
 ======
@@ -57,8 +43,10 @@ Singleton - Anonymous external
 
 (papier
  (sub_document
-  (sub_document_block
-   (sub_document_content))))
+  (title
+   (word
+    (fmt)))
+  (contents)))
 
 
 ======
@@ -79,8 +67,7 @@ Singleton - Named Papier
     (tag))
    (word
     (tag)))
-  (sub_document_block
-   (sub_document_content))))
+  (contents)))
 
 
 ======
@@ -101,6 +88,7 @@ Singleton - External Document
     (tag))
    (word
     (tag))
-   (word))
-  (sub_document_block
-   (sub_document_content))))
+   (word)
+	 (word
+	  (fmt)))
+  (contents)))
