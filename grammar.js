@@ -81,10 +81,19 @@ module.exports = grammar({
         seq(
           $._doc_start,
           optional(field('title', $.title)),
-          field('opening_brace', '{'),
-          NL,
-          optional(field('contents', $.contents)),
-          field('closing_brace', '}'),
+          choice(
+            seq(
+              field('opening_brace', '{'),
+              NL,
+              optional(field('contents', $.contents)),
+              field('closing_brace', '}'),
+            ),
+            seq(
+              field('opening_brace', '!EoF{'),
+              optional(field('contents', $.raw_contents)),
+              field('closing_brace', '}EoF!'),
+            ),
+          ),
           optional(NL),
         ),
       ),
@@ -92,5 +101,6 @@ module.exports = grammar({
     title: $ => repeat1($.word),
     contents: $ =>
       repeat1(field('line', seq(optional(seq(TAB, REGEX_LINE)), NL))),
+    raw_contents: $ => repeat1(field('line', seq(optional(REGEX_LINE), NL))),
   },
 });

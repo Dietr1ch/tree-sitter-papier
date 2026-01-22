@@ -18,3 +18,25 @@ Text
   (title
    (word))
   (contents)))
+
+
+======
+Simple raw sub-doc
+:language(papier)
+======
+Text
+
+# title !EoF{
+	sample_content
+}EoF!
+---
+
+(papier
+ (text
+  (line
+	 (word))
+  (line))
+ (sub_document
+  (title
+   (word))
+  (raw_contents)))

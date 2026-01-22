@@ -16,6 +16,7 @@
 
 (sub_document) @function
 (contents) @attribute
+(raw_contents) @attribute
 
 
 ;; Highlighting classes:
