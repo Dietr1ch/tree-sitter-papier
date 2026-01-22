@@ -24,8 +24,10 @@ log.html
 
 ## Generated files (https://tree-sitter.github.io/tree-sitter/cli/init.html#generated-files)
 
-src/
-!src/scanner.c
+src/grammar.json
+src/node-types.json
+src/parser.c
+src/tree_sitter/
 
 ### C
 Makefile
