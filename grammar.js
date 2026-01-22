@@ -34,7 +34,7 @@ function prefix_token(name, precedence, prefix, pattern) {
   return token(prec(precedence, seq(prefix, field(name, pattern))));
 }
 
-// NOTE: This is under development and does not even work.
+// NOTE: This is under development and has some rough edges
 module.exports = grammar({
   name: 'papier',
 
@@ -82,22 +82,26 @@ module.exports = grammar({
           $._doc_start,
           optional(field('title', $.title)),
           choice(
+            // Tab-nested doc
             seq(
               field('opening_brace', '{'),
               NL,
               optional(field('contents', $.contents)),
               field('closing_brace', '}'),
             ),
+            // Raw doc (hardcoding `!EoF`)
             seq(
               field('opening_brace', '!EoF{'),
+              NL,
               optional(field('contents', $.raw_contents)),
               field('closing_brace', '}EoF!'),
             ),
+            // Empty doc
+            NL,
           ),
           optional(NL),
         ),
       ),
-
     title: $ => repeat1($.word),
     contents: $ =>
       repeat1(field('line', seq(optional(seq(TAB, REGEX_LINE)), NL))),

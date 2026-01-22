@@ -1,8 +1,29 @@
 ======
-Singleton - Empty document
+Singleton - Empty document no NL
 :language(papier)
 ======
 # title with #many #tags @fmt
+---
+
+(papier
+ (sub_document
+  (title
+	 (word)
+	 (word)
+	 (word
+	  (tag))
+	 (word
+	  (tag))
+	 (word
+	  (fmt)))))
+
+
+======
+Singleton - Empty document with NL
+:language(papier)
+======
+# title with #many #tags @fmt
+
 ---
 
 (papier
