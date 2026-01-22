@@ -8,9 +8,7 @@
 // @ts-check
 
 const NL = /\n/;
-const SPACE = /[\s]+/; // [[:space:]] /[\t\n\v\f\r ]/
 const TAB = /\t/;
-const SPACE_TAB = /[[:blank:]]+/; // [\t ]
 
 const REGEX_LINE = /[^\n]+/;
 const REGEX_CHUNK = /[^ \t\n]+/;
@@ -24,15 +22,6 @@ const REGEX_ALIAS = /[a-zA-Z][-_a-zA-Z0-9]*/;
 const REGEX_REF = REGEX_CHUNK;
 const REGEX_TAG = new RustRegex('(?i)[a-z0-9][-_a-z0-9]*');
 const REGEX_FMT = /[a-z][-_a-z0-9]*/;
-
-/**
- * Implements Elem+ using a separator.
- * @param {RuleOrLiteral} elem
- * @param {string} sep
- */
-function many_sep(elem, sep) {
-  return seq(elem, repeat(seq(sep, elem)));
-}
 
 /**
  * A prefix-defined token (#tag, @at, /cmd, $VAR)
@@ -87,31 +76,20 @@ module.exports = grammar({
 
     // Sub-document
     // ------------
-    // `^# (?P<title>) {$`
-    // `\t(?P<line>)$`
-    // `^}$`
     sub_document: $ =>
       prec.left(
         seq(
           $.doc_start,
-          optional(SPACE),
           optional(field('title', repeat1($.word))),
-          '{',
+          field('opening_brace', '{'),
           NL,
           optional(field('contents', $.contents)),
-          '}',
+          field('closing_brace', '}'),
           optional(NL),
         ),
       ),
 
     contents: $ =>
-      repeat1(
-        field(
-          'line', //
-          choice($._empty_line, $._content_line),
-        ),
-      ),
-    _empty_line: $ => NL,
-    _content_line: $ => seq('\t', REGEX_LINE),
+      repeat1(field('line', seq(optional(seq(TAB, REGEX_LINE)), NL))),
   },
 });

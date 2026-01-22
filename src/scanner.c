@@ -91,22 +91,23 @@ static inline bool scan(Scanner *scanner, //
       // Found `^#`
     case '#': {
       lx_advance(lexer);
+      lx_terminate(lexer); // _DOC_START would finish here
+
       if (lexer->eof(lexer)) {
         return NO_TOKEN_LEXED;
       }
 
       switch (lexer->lookahead) {
       case ' ': {
-        // Found `^# `. This is a sub-document heading
+        // Found `^(#) `. This is a sub-document heading
         lx_skip(lexer);
         lexer->result_symbol = DOC_START;
-        lx_terminate(lexer);
         return TOKEN_LEXED;
       }
 
       default: {
+        // Found `^(#)[^ ]`
         lx_log(lexer, "Found a tag or something weird");
-        lx_skip(lexer);        // The next symbol isn't part of DOC_START
         return NO_TOKEN_LEXED; // Whoops, failed to find the heading start
       }
       } // ..switch(lexer->lookahead)
