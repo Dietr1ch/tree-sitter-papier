@@ -5,11 +5,12 @@
       "name": "papier",
       "camelcase": "Papier",
       "title": "Papier",
-      "scope": "source.papier",
+      "scope": "text.papier",
       "file-types": ["pp", "papier"],
-      "injection-regex": "^papier$",
       "class-name": "TreeSitterPapier",
-      "highlights": "queries/highlights.scm"
+      "highlights": "queries/highlights.scm",
+      "injections": "queries/injections.scm",
+      "injection-regex": "papier"
     }
   ],
   "metadata": {

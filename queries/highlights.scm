@@ -18,6 +18,14 @@
 (contents) @attribute
 (raw_contents) @attribute
 
+(doc_start) @punctuation.special
+
+[
+  "{"
+  "}"
+  "!EoF{"
+  "}EoF!"
+] @punctuation.bracket
 
 ;; Highlighting classes:
 ;; - attribute

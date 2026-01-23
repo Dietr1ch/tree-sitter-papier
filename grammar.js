@@ -38,14 +38,9 @@ function prefix_token(name, precedence, prefix, pattern) {
 module.exports = grammar({
   name: 'papier',
 
-  extras: _ => [
-    // NOTE: No \n
-    ' ',
-    '\r', // fuck this shit!
-  ],
+  extras: _ => [' ', '\r'], // NOTE: No \n
 
-  // These must be in sync with TokenType in ./src/scanner.c
-  externals: $ => [$._doc_start],
+  externals: $ => [$.doc_start], // In sync with `TokenType` in ./src/scanner.c
 
   rules: {
     papier: $ => repeat(choice(prec(1, $.sub_document), $.text)),
@@ -79,7 +74,7 @@ module.exports = grammar({
     sub_document: $ =>
       prec.left(
         seq(
-          $._doc_start,
+          $.doc_start,
           optional(field('title', $.title)),
           choice(
             // Tab-nested doc
@@ -89,9 +84,9 @@ module.exports = grammar({
               optional(field('contents', $.contents)),
               field('closing_brace', '}'),
             ),
-            // Raw doc (hardcoding `!EoF`)
+            // Raw doc
             seq(
-              field('opening_brace', '!EoF{'),
+              field('opening_brace', '!EoF{'), // FIXME: Don't hardcode `EoF`.
               NL,
               optional(field('contents', $.raw_contents)),
               field('closing_brace', '}EoF!'),
