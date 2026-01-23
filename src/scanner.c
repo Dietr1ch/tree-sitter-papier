@@ -64,6 +64,9 @@ static inline void destroy(Scanner *scanner) { ts_free(scanner); }
 // Serialisation
 static inline unsigned serialize(const Scanner *const scanner, //
                                  uint8_t *buffer) {
+  (void)scanner;
+  (void)buffer;
+
   const unsigned bytes_used = 0;
   assert(bytes_used <= TREE_SITTER_SERIALIZATION_BUFFER_SIZE);
 
@@ -71,7 +74,11 @@ static inline unsigned serialize(const Scanner *const scanner, //
 }
 static inline void deserialize(Scanner *scanner,   //
                                const char *buffer, //
-                               unsigned length) {}
+                               unsigned length) {
+  (void)scanner;
+  (void)buffer;
+  (void)length;
+}
 
 // Scanning
 #define TOKEN_LEXED true
@@ -79,6 +86,9 @@ static inline void deserialize(Scanner *scanner,   //
 static inline bool scan(Scanner *scanner, //
                         TSLexer *lexer,   //
                         const bool *valid_symbols) {
+  (void)scanner;
+  (void)valid_symbols;
+
   if (lexer->eof(lexer)) {
     // TODO: Figure out what to do
     return NO_TOKEN_LEXED;
