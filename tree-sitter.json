@@ -6,7 +6,10 @@
       "camelcase": "Papier",
       "title": "Papier",
       "scope": "text.papier",
-      "file-types": ["pp", "papier"],
+      "file-types": [
+        "pp",
+        "papier"
+      ],
       "class-name": "TreeSitterPapier",
       "highlights": "queries/highlights.scm",
       "injections": "queries/injections.scm",
@@ -31,11 +34,11 @@
   },
   "bindings": {
     "c": true,
-    "go": false,
-    "node": false,
-    "python": false,
-    "rust": false,
-    "swift": false,
-    "zig": false
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true,
+    "zig": true
   }
 }

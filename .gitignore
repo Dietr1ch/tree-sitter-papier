@@ -22,44 +22,6 @@
 ## Debugging output
 log.html
 
-## Generated files (https://tree-sitter.github.io/tree-sitter/cli/init.html#generated-files)
-
-### C
-Makefile
-CMakeLists.txt
-bindings/c
-
-### Go
-go.mod
-bindings/go
-
-### Node
-binding.gpy
-bindings/node
-
-### Java
-pom.xml
-bindings/java
-
-### Python
-pyproject.toml
-setup.py
-bindings/python
-
-### Rust
-Cargo.toml
-bindings/rust
-
-### Swift
-Package.swift
-bindings/swift
-
-### Zig
-build.zig
-build.zig.zon
-bindings/zig
-
-
 ## Artifacts
 
 ### C
