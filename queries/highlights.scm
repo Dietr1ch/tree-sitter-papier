@@ -18,8 +18,6 @@
 (contents) @attribute
 (raw_contents) @attribute
 
-(doc_start) @punctuation.special
-
 [
   "{"
   "}"

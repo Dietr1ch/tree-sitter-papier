@@ -40,7 +40,7 @@ module.exports = grammar({
 
   extras: _ => [' ', '\r'], // NOTE: No \n
 
-  externals: $ => [$.doc_start], // In sync with `TokenType` in ./src/scanner.c
+  externals: $ => [$._doc_start], // In sync with `TokenType` in ./src/scanner.c
 
   rules: {
     papier: $ => repeat(choice(prec(1, $.sub_document), $.text)),
@@ -74,7 +74,7 @@ module.exports = grammar({
     sub_document: $ =>
       prec.left(
         seq(
-          $.doc_start,
+          $._doc_start,
           optional(field('title', $.title)),
           choice(
             // Tab-nested doc

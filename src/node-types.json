@@ -100,16 +100,6 @@
           }
         ]
       }
-    },
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "doc_start",
-          "named": true
-        }
-      ]
     }
   },
   {
@@ -179,10 +169,6 @@
   },
   {
     "type": "alias",
-    "named": true
-  },
-  {
-    "type": "doc_start",
     "named": true
   },
   {

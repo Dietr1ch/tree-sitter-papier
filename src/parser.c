@@ -34,7 +34,7 @@ enum ts_symbol_identifiers {
   anon_sym_RBRACEEoF_BANG = 12,
   aux_sym_contents_token1 = 13,
   aux_sym_contents_token2 = 14,
-  sym_doc_start = 15,
+  sym__doc_start = 15,
   sym_papier = 16,
   sym_text = 17,
   sym_line = 18,
@@ -66,7 +66,7 @@ static const char * const ts_symbol_names[] = {
   [anon_sym_RBRACEEoF_BANG] = "}EoF!",
   [aux_sym_contents_token1] = "contents_token1",
   [aux_sym_contents_token2] = "contents_token2",
-  [sym_doc_start] = "doc_start",
+  [sym__doc_start] = "_doc_start",
   [sym_papier] = "papier",
   [sym_text] = "text",
   [sym_line] = "line",
@@ -98,7 +98,7 @@ static const TSSymbol ts_symbol_map[] = {
   [anon_sym_RBRACEEoF_BANG] = anon_sym_RBRACEEoF_BANG,
   [aux_sym_contents_token1] = aux_sym_contents_token1,
   [aux_sym_contents_token2] = aux_sym_contents_token2,
-  [sym_doc_start] = sym_doc_start,
+  [sym__doc_start] = sym__doc_start,
   [sym_papier] = sym_papier,
   [sym_text] = sym_text,
   [sym_line] = sym_line,
@@ -175,8 +175,8 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .visible = false,
     .named = false,
   },
-  [sym_doc_start] = {
-    .visible = true,
+  [sym__doc_start] = {
+    .visible = false,
     .named = true,
   },
   [sym_papier] = {
@@ -1242,7 +1242,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_RBRACE] = ACTIONS(1),
     [anon_sym_BANGEoF_LBRACE] = ACTIONS(1),
     [aux_sym_contents_token1] = ACTIONS(1),
-    [sym_doc_start] = ACTIONS(1),
+    [sym__doc_start] = ACTIONS(1),
   },
   [STATE(1)] = {
     [sym_papier] = STATE(45),
@@ -1261,7 +1261,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [sym_ref] = ACTIONS(7),
     [sym_tag] = ACTIONS(7),
     [sym_fmt] = ACTIONS(7),
-    [sym_doc_start] = ACTIONS(9),
+    [sym__doc_start] = ACTIONS(9),
   },
   [STATE(2)] = {
     [sym_text] = STATE(2),
@@ -1279,7 +1279,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [sym_ref] = ACTIONS(16),
     [sym_tag] = ACTIONS(16),
     [sym_fmt] = ACTIONS(16),
-    [sym_doc_start] = ACTIONS(19),
+    [sym__doc_start] = ACTIONS(19),
   },
   [STATE(3)] = {
     [sym_text] = STATE(2),
@@ -1297,7 +1297,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [sym_ref] = ACTIONS(7),
     [sym_tag] = ACTIONS(7),
     [sym_fmt] = ACTIONS(7),
-    [sym_doc_start] = ACTIONS(9),
+    [sym__doc_start] = ACTIONS(9),
   },
 };
 
@@ -1306,7 +1306,7 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(26), 1,
       aux_sym_line_token1,
     ACTIONS(24), 2,
-      sym_doc_start,
+      sym__doc_start,
       ts_builtin_sym_end,
     STATE(4), 2,
       sym_line,
@@ -1325,7 +1325,7 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(5), 1,
       aux_sym_line_token1,
     ACTIONS(32), 2,
-      sym_doc_start,
+      sym__doc_start,
       ts_builtin_sym_end,
     STATE(4), 2,
       sym_line,
@@ -1404,7 +1404,7 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_BANGEoF_LBRACE,
   [124] = 2,
     ACTIONS(53), 2,
-      sym_doc_start,
+      sym__doc_start,
       ts_builtin_sym_end,
     ACTIONS(55), 7,
       aux_sym_line_token1,
@@ -1416,7 +1416,7 @@ static const uint16_t ts_small_parse_table[] = {
       sym_fmt,
   [138] = 2,
     ACTIONS(57), 2,
-      sym_doc_start,
+      sym__doc_start,
       ts_builtin_sym_end,
     ACTIONS(59), 7,
       aux_sym_line_token1,
@@ -1441,7 +1441,7 @@ static const uint16_t ts_small_parse_table[] = {
       sym_fmt,
   [168] = 2,
     ACTIONS(63), 2,
-      sym_doc_start,
+      sym__doc_start,
       ts_builtin_sym_end,
     ACTIONS(65), 7,
       aux_sym_line_token1,
@@ -1466,7 +1466,7 @@ static const uint16_t ts_small_parse_table[] = {
       sym_fmt,
   [198] = 2,
     ACTIONS(70), 2,
-      sym_doc_start,
+      sym__doc_start,
       ts_builtin_sym_end,
     ACTIONS(72), 7,
       aux_sym_line_token1,
@@ -1478,7 +1478,7 @@ static const uint16_t ts_small_parse_table[] = {
       sym_fmt,
   [212] = 2,
     ACTIONS(74), 2,
-      sym_doc_start,
+      sym__doc_start,
       ts_builtin_sym_end,
     ACTIONS(76), 7,
       aux_sym_line_token1,
@@ -1490,7 +1490,7 @@ static const uint16_t ts_small_parse_table[] = {
       sym_fmt,
   [226] = 2,
     ACTIONS(78), 2,
-      sym_doc_start,
+      sym__doc_start,
       ts_builtin_sym_end,
     ACTIONS(80), 7,
       aux_sym_line_token1,
@@ -1502,7 +1502,7 @@ static const uint16_t ts_small_parse_table[] = {
       sym_fmt,
   [240] = 2,
     ACTIONS(82), 2,
-      sym_doc_start,
+      sym__doc_start,
       ts_builtin_sym_end,
     ACTIONS(84), 7,
       aux_sym_line_token1,
@@ -1514,7 +1514,7 @@ static const uint16_t ts_small_parse_table[] = {
       sym_fmt,
   [254] = 2,
     ACTIONS(86), 2,
-      sym_doc_start,
+      sym__doc_start,
       ts_builtin_sym_end,
     ACTIONS(88), 7,
       aux_sym_line_token1,
@@ -1828,16 +1828,16 @@ static const TSParseActionEntry ts_parse_actions[] = {
 };
 
 enum ts_external_scanner_symbol_identifiers {
-  ts_external_token_doc_start = 0,
+  ts_external_token__doc_start = 0,
 };
 
 static const TSSymbol ts_external_scanner_symbol_map[EXTERNAL_TOKEN_COUNT] = {
-  [ts_external_token_doc_start] = sym_doc_start,
+  [ts_external_token__doc_start] = sym__doc_start,
 };
 
 static const bool ts_external_scanner_states[2][EXTERNAL_TOKEN_COUNT] = {
   [1] = {
-    [ts_external_token_doc_start] = true,
+    [ts_external_token__doc_start] = true,
   },
 };
 
