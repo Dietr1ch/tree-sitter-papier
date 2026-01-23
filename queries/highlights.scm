@@ -25,6 +25,8 @@
   "}EoF!"
 ] @punctuation.bracket
 
+(text) @comment
+
 ; Highlighting classes:
 ; - attribute
 ; - comment
