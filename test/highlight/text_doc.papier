@@ -1,0 +1,10 @@
+This is text
+// ^comment
+
+# title #tag @fmt {
+// ^ @comment
+//        ^ @tag
+//            ^ @type
+//                ^ @punctuation.bracket
+}
+// <- @punctuation.bracket
