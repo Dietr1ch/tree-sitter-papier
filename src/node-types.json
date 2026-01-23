@@ -1,0 +1,216 @@
+[
+  {
+    "type": "contents",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "line",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "word",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "papier",
+    "named": true,
+    "root": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "sub_document",
+          "named": true
+        },
+        {
+          "type": "text",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "raw_contents",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "sub_document",
+    "named": true,
+    "fields": {
+      "closing_brace": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "}",
+            "named": false
+          },
+          {
+            "type": "}EoF!",
+            "named": false
+          }
+        ]
+      },
+      "contents": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "contents",
+            "named": true
+          },
+          {
+            "type": "raw_contents",
+            "named": true
+          }
+        ]
+      },
+      "opening_brace": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "!EoF{",
+            "named": false
+          },
+          {
+            "type": "{",
+            "named": false
+          }
+        ]
+      },
+      "title": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "title",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "doc_start",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "text",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "line",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "title",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "word",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "word",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "alias",
+          "named": true
+        },
+        {
+          "type": "fmt",
+          "named": true
+        },
+        {
+          "type": "ref",
+          "named": true
+        },
+        {
+          "type": "tag",
+          "named": true
+        },
+        {
+          "type": "uuid",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "!EoF{",
+    "named": false
+  },
+  {
+    "type": "alias",
+    "named": true
+  },
+  {
+    "type": "doc_start",
+    "named": true
+  },
+  {
+    "type": "fmt",
+    "named": true
+  },
+  {
+    "type": "ref",
+    "named": true
+  },
+  {
+    "type": "tag",
+    "named": true
+  },
+  {
+    "type": "uuid",
+    "named": true
+  },
+  {
+    "type": "{",
+    "named": false
+  },
+  {
+    "type": "}",
+    "named": false
+  },
+  {
+    "type": "}EoF!",
+    "named": false
+  }
+]
