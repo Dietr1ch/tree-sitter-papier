@@ -1,0 +1,9 @@
+[[language]]
+name = "papier"
+scope = "text.papier"
+file-types = ["papier"]
+roots = []
+
+[[grammar]]
+name = "papier"
+source = { git = "https://github.com/papier-lang/tree-sitter-papier", rev = "master" }
