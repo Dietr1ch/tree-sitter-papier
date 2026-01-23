@@ -10,7 +10,8 @@
       "class-name": "TreeSitterPapier",
       "highlights": "queries/highlights.scm",
       "injections": "queries/injections.scm",
-      "injection-regex": "papier"
+      "injection-regex": "papier",
+      "locals": "queries/locals.scm"
     }
   ],
   "metadata": {
