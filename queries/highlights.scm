@@ -1,12 +1,12 @@
-;; Highlights
+; Highlights
 
-;; Docs
-;; - Queries: https://tree-sitter.github.io/tree-sitter/using-parsers/queries/index.html
+; Docs
+; - Queries: https://tree-sitter.github.io/tree-sitter/using-parsers/queries/index.html
 
 
-;; Links (Identifiers)
+; Links (Identifiers)
 
-;; Words
+; Words
 (uuid) @constant.builtin
 (alias) @module
 (ref) @constant
@@ -27,30 +27,30 @@
   "}EoF!"
 ] @punctuation.bracket
 
-;; Highlighting classes:
-;; - attribute
-;; - comment
-;; - constant
-;; - constant.builtin
-;; - constructor
-;; - embedded
-;; - function
-;; - function.builtin
-;; - keyword
-;; - module
-;; - number
-;; - operator
-;; - property
-;; - property.builtin
-;; - punctuation
-;; - punctuation.bracket
-;; - punctuation.delimiter
-;; - punctuation.special
-;; - string
-;; - string.special
-;; - tag
-;; - type
-;; - type.builtin
-;; - variable
-;; - variable.builtin
-;; - variable.parameter
+; Highlighting classes:
+; - attribute
+; - comment
+; - constant
+; - constant.builtin
+; - constructor
+; - embedded
+; - function
+; - function.builtin
+; - keyword
+; - module
+; - number
+; - operator
+; - property
+; - property.builtin
+; - punctuation
+; - punctuation.bracket
+; - punctuation.delimiter
+; - punctuation.special
+; - string
+; - string.special
+; - tag
+; - type
+; - type.builtin
+; - variable
+; - variable.builtin
+; - variable.parameter
